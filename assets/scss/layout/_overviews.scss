@@ -1,0 +1,76 @@
+
+
+
+.overviews {
+    display: block;
+    padding: 30px 0;
+    background: url(https://images.unsplash.com/photo-1553632168-eb4237620881?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2689&q=80) no-repeat;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .overviews_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .overview_item {
+            padding: 20px;
+            width: 25%;
+
+
+            .overview_item-number {
+                text-align: center;
+                padding: 10px 0;
+                color: #ffffff;
+                font-size: $fz-h1;
+                font-weight: $fw-700;
+                font-family: 'Raleway', sans-serif;
+
+            }
+
+            .overview_item-title {
+                text-align: center;
+                color: #ffffff;
+                font-family: 'Raleway', sans-serif;
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .overviews {
+
+        .overviews_wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .overview_item {
+                
+
+                .overview_item-number {
+                    padding: 10px 0;
+                    font-size: 40px;
+                }
+
+                .overview_item-title {
+                    font-size: 14px;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

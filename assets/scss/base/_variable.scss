@@ -1,0 +1,106 @@
+// Colors
+$night: #171c28;
+$black: #36363c;
+$dark-grey: #444452;
+$grey: #777777;
+$slate: #afafbf;
+$off-white: #e7e7e7;
+$white: #ffffff;
+
+// Fonts
+$font-stack: 'Raleway', sans-serif;
+
+  
+$fz-h1: 80px;
+$fz-h2: 40px;
+$fz-h3: 30px;
+$fz-h4: 16px;
+$fz-h5: 18px;
+$fz-h6: 28px;
+
+$fw-800: 800;
+$fw-700: 700;
+$fw-600: 600;
+$fw-500: 500;
+$fw-400: 400;
+$fw-300: 300;
+$fw-200: 200;
+
+$ls-primary: 1.2px;
+$ls-secondary: 1px;
+
+
+$lh-primary: 24px;
+$lh-secondary: 18px;
+
+
+// Media queries
+$fifteen-inch: 1440px;
+$thirteen-inch: 1280px;
+$desktop-width: 1024px;
+$little-desktop: 850px;
+$tablet-width: 768px;
+$weird-not-tablet-width: 630px;
+$phablet-width: 550px;
+$mobile-width: 480px;
+$small-mobile-width: 360px;
+$tiny-mobile-width: 330px;
+
+@mixin transition {
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin thirteen {
+  @media screen and (max-width: #{$thirteen-inch}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin little-desktop {
+  @media screen and (max-width: #{$little-desktop}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin weird-medium {
+  @media screen and (max-width: #{$weird-not-tablet-width}) {
+    @content;
+  }
+}
+
+@mixin phablet {
+  @media screen and (max-width: #{$phablet-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin small-mobile {
+  @media screen and (max-width: #{$small-mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tiny-mobile {
+  @media screen and (max-width: #{$tiny-mobile-width}) {
+    @content;
+  }
+}
+

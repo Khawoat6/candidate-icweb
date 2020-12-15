@@ -1,0 +1,37 @@
+// @import '../base/variable';
+
+
+.footer {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+
+    a {
+        width: 100%;
+        font-family: 'Raleway', sans-serif;
+        color: $grey;
+        text-decoration: none;
+        padding: 40px 0;
+        font-weight: 600;
+        font-size: $fz-h5;
+
+        b {
+            text-align: center;
+            color: #000000;
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 70px 0;
+
+        a {
+
+            b {
+
+            }
+        }
+    }
+}

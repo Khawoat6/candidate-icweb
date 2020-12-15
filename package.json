@@ -1,0 +1,30 @@
+{
+  "name": "assignment-icweb",
+  "version": "1.0.0",
+  "description": "candidate-test position Front-end Developer at IC WEB Co., Ltd.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch assets/scss -o assets/css --output-style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khawoat6/assignment-icweb.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS3",
+    "SCSS",
+    "JS"
+  ],
+  "author": "Phattaraphon Chomchaiyaphum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khawoat6/assignment-icweb/issues"
+  },
+  "homepage": "https://github.com/Khawoat6/assignment-icweb#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "node-sass": "^5.0.0"
+  }
+}
