@@ -1,9 +1,16 @@
+/**
+*
+*   Service
+*
+*/
+
+
+
 .services {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Raleway', sans-serif;
-
 
     .services_wrapper {
         // width: 100%;
@@ -22,9 +29,11 @@
             letter-spacing: 3px;
             padding: 20px 0;
             font-weight: 600;
+            @extend %selection;
 
             strong {
                 color: orange;
+                @extend %selection;
             }
         }
 
@@ -53,6 +62,7 @@
                     font-weight: 600;
                     font-size: 14px;
                     margin-top: 30px;
+                    @extend %selection;
                 }
 
                 p {
@@ -61,7 +71,7 @@
                     color:#777777;
                     font-size: 13px;
                     line-height: 18px;
-
+                    @extend %selection;
                 }
             }
         }
@@ -69,42 +79,31 @@
 }
 
 
-
-
-@media (max-width: 480px) {
-
+@media  only screen and (max-width: 375px) {
     .services {
-
         .services_wrapper {
             display: flex;
             flex-direction: column;
 
             .services_title {
-
-                font-size: $fz-h6;
-
+                font-size: $fz-h2;
             }
 
             .service_details {
-
-                display: flex;
-                flex-direction: column;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
 
                 .service_detail-item {
-                    padding: 20px;
+                    padding: 10px;
 
-                    i {
-
-                    }
-
+                    i {}
                     h2 {
                         font-size: $fz-h5;
                         font-weight: $fw-700;
-
                     }
-
                     p {
-                        font-size: 18px;
+                        font-size: $fz-h4;
                         line-height: $lh-primary;
                     }
                 }
@@ -112,3 +111,138 @@
         }
     }
 } 
+
+@media only screen and (max-width: 480px) {
+    .services {
+        .services_wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .services_title {
+                font-size: $fz-h2;
+            }
+
+            .service_details {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                
+                .service_detail-item {
+                    padding: 20px;
+
+                    i {}
+                    h2 {
+                        font-size: $fz-h5;
+                        font-weight: $fw-700;
+                    }
+                    p {
+                        font-size: $fz-h4;
+                        line-height: $lh-primary;
+                    }
+                }
+            }
+        }
+    }
+} 
+
+@media only screen and (max-width: 630px) {
+    .services {
+        .services_wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .services_title {
+                font-size: $fz-h2;
+            }
+
+            .service_details {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                
+                .service_detail-item {
+                    padding: 20px;
+
+                    i {}
+                    h2 {
+                        font-size: $fz-h5;
+                        font-weight: $fw-700;
+                    }
+                    p {
+                        font-size: $fz-h4;
+                        line-height: $lh-primary;
+                    }
+                }
+            }
+        }
+    }
+} 
+
+@media only screen and (max-width: 768px) {
+    .services {
+        .services_wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .services_title {
+                font-size: $fz-h2;
+            }
+
+            .service_details {
+                // display: flex;
+                // flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: 1fr;
+
+                .service_detail-item {
+                    padding: 10px;
+
+                    i {}
+                    h2 {
+                        font-size: $fz-h5;
+                        font-weight: $fw-700;
+                    }
+                    p {
+                        font-size: $fz-h4;
+                        line-height: $lh-primary;
+                    }
+                }
+            }
+        }
+    }
+} 
+
+@media only screen and (max-width: 1024px) {
+    .services {
+        .services_wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .services_title {
+                font-size: $fz-h2;
+            }
+
+            .service_details {
+
+                // display: grid;
+                // grid-template-columns: 1fr 1fr;
+
+                .service_detail-item {
+                    padding: 30px;
+
+                    i {}
+                    h2 {
+                        font-size: $fz-h5;
+                        font-weight: $fw-700;
+                    }
+                    p {
+                        font-size: $fz-h4;
+                        line-height: $lh-primary;
+                    }
+                }
+            }
+        }
+    }
+}

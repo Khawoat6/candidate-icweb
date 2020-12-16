@@ -1,12 +1,13 @@
+/**
+*
+*   Great Work
+*
+*/
+
 
 .great-work {
     width: 100%;
     padding: 80px 0 20px 0;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-
 
     .great-work-title {
         text-align: center;
@@ -16,11 +17,12 @@
         padding: 20px 0;
         text-transform: uppercase;
         letter-spacing: $ls-primary;
+        @extend %selection;
 
         strong {
             color: orange;
+            @extend %selection;
         }
-    
     }
 
     .great-work-menu {
@@ -42,43 +44,60 @@
                 text-decoration: none;
                 color: $black;
                 font-family: $font-stack;
+                @extend %selection;
 
                 &:hover {
                     color: orange;
                 }
+            }
+        }
 
+        .btn {
+            background-color: $white;
+            border: none;
+            outline: none;
+            padding: 20px 30px;
+            color: $black;
+            cursor: pointer;
+            text-transform: $tt-uppercase;
+            letter-spacing: $ls-primary;
+            @extend %selection;
+
+            &.active {
+                color: $orange;
             }
         }
     }
 
-    .great-work-gallery {
-        display: flex;
-        flex-wrap: wrap;
+    .column {
+        float: left;
+        width: 25%;
+        display: none;
+    }
 
-        img {
-            width: 25%;
-        }
+    .show {
+        display: block;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
     }
 }
 
 
 
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     .great-work {
         width: 100%;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-    
     
         .great-work-title {
             text-align: center;
             font-family: $font-stack;
             font-size: $fz-h3;
             font-weight: $fw-500;
-            padding: 20px 0;
-        
+            padding: 10px 20px;
         }
     
         .great-work-menu {
@@ -86,29 +105,122 @@
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 20px 0;
     
             li {
-                padding: 20px 0;
+                padding: 10px 0;
     
                 a {
                     text-decoration: none;
                     color: $black;
                     font-family: $font-stack;
-    
+                }
+            }
+            .btn {
+                padding: 10px 5px;
+                color: $black;
+                background-color: $white;
+
+                &.active {
+                    color: $orange;
                 }
             }
         }
     
-        .great-work-gallery {
-            display: flex;
-            flex-direction: column;
+        .column {
+            float: left;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 480px)  and (max-width: 600px){
+    .great-work {
+        width: 100%;
     
-            img {
-                width: 100%;
+        .great-work-title {
+            text-align: center;
+            font-family: $font-stack;
+            font-size: $fz-h3;
+            font-weight: $fw-500;
+            padding: 20px 20px;
+        }
+    
+        .great-work-menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+    
+            li {
+                padding: 10px 0;
+    
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    font-family: $font-stack;
+                }
             }
+
+            .btn {
+                padding: 10px 5px;
+                color: $black;
+                background-color: $white;
+
+                &.active {
+                    color: $orange;
+                }
+            }
+        }
+    
+        .column {
+            float: left;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px)  and (max-width: 768px){
+    .great-work {
+        width: 100%;
+    
+        .great-work-title {
+            text-align: center;
+            font-family: $font-stack;
+            font-size: $fz-h3;
+            font-weight: $fw-500;
+            padding: 20px 20px;
+        }
+    
+        .great-work-menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+    
+            li {
+                padding: 10px 0;
+    
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    font-family: $font-stack;
+                }
+            }
+
+            .btn {
+                padding: 10px 5px;
+                color: $black;
+                background-color: $white;
+
+                &.active {
+                    color: $orange;
+                }
+            }
+        }
+    
+        .column {
+            float: left;
+            width: 50%;
         }
     }
 }

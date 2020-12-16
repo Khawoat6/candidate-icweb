@@ -1,23 +1,27 @@
 // Colors
 $night: #171c28;
-$black: #36363c;
+$black: #000000;
 $dark-grey: #444452;
 $grey: #777777;
 $slate: #afafbf;
 $off-white: #e7e7e7;
 $white: #ffffff;
+$orange : orange;
 
-// Fonts
+// Font Family
 $font-stack: 'Raleway', sans-serif;
 
-  
-$fz-h1: 80px;
-$fz-h2: 40px;
-$fz-h3: 30px;
+// Font Size
+$fz-h1: 38px;
+$fz-h2: 30px;
+$fz-h3: 24px;
 $fz-h4: 16px;
 $fz-h5: 18px;
-$fz-h6: 28px;
+$fz-h6: 13px;
+$fz-h7: 28px;
+$fz-h9: 20px;
 
+// Font Weight
 $fw-800: 800;
 $fw-700: 700;
 $fw-600: 600;
@@ -26,12 +30,16 @@ $fw-400: 400;
 $fw-300: 300;
 $fw-200: 200;
 
+// Letter-spacing
 $ls-primary: 1.2px;
 $ls-secondary: 1px;
 
-
+// Line-height
 $lh-primary: 24px;
 $lh-secondary: 18px;
+
+// Text-transform
+$tt-uppercase: uppercase;
 
 
 // Media queries
@@ -46,61 +54,79 @@ $mobile-width: 480px;
 $small-mobile-width: 360px;
 $tiny-mobile-width: 330px;
 
-@mixin transition {
-  transition: all 0.2s ease-in-out;
+
+// FlexBox
+%flex-cen-cen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@mixin thirteen {
-  @media screen and (max-width: #{$thirteen-inch}) {
-    @content;
+%flex-row-cen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+%flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+%flex-row-sb-cen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+// Font  
+%theme-font-1 {
+  color: $white;
+  font-family: $font-stack;
+  letter-spacing: $ls-primary;
+}
+
+// Button
+%theme-btn {
+  padding: 10px 30px;
+  border: 1px solid $white;
+  border-radius: 3px;
+  margin: 20px 10px;
+  font-family: $font-stack;
+  font-weight: $fw-500;
+}
+
+%theme-a-white {
+  color: $white;
+  text-decoration: none;
+  font-family: $font-stack;
+  letter-spacing: $ls-primary;
+  text-transform: $tt-uppercase;
+}
+
+%selection {
+  &::selection {
+    background-color: $orange;
+}
+}
+
+%btn-hover {
+  &:hover {
+    opacity: 0.8;
   }
 }
 
-@mixin desktop {
-  @media screen and (max-width: #{$desktop-width}) {
-    @content;
-  }
+%theme-li {
+  list-style-type: none;
+  cursor: pointer;
+  text-align: center;
 }
 
-@mixin little-desktop {
-  @media screen and (max-width: #{$little-desktop}) {
-    @content;
-  }
+%theme-overview_item {
+  text-align: center;
+  color: $white;
+  text-transform: $tt-uppercase;
+  font-family: $font-stack;
 }
-
-@mixin tablet {
-  @media screen and (max-width: #{$tablet-width}) {
-    @content;
-  }
-}
-
-@mixin weird-medium {
-  @media screen and (max-width: #{$weird-not-tablet-width}) {
-    @content;
-  }
-}
-
-@mixin phablet {
-  @media screen and (max-width: #{$phablet-width}) {
-    @content;
-  }
-}
-
-@mixin mobile {
-  @media screen and (max-width: #{$mobile-width}) {
-    @content;
-  }
-}
-
-@mixin small-mobile {
-  @media screen and (max-width: #{$small-mobile-width}) {
-    @content;
-  }
-}
-
-@mixin tiny-mobile {
-  @media screen and (max-width: #{$tiny-mobile-width}) {
-    @content;
-  }
-}
-

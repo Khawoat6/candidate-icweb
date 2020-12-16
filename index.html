@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+
     <!-- OTHER META TAGS -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- WEBSITE TITLE -->
-    <title>My Website</title>
+    <title>IC WEB Co., Ltd. | Front-end Developer</title>
 
     <!-- WEBSITE DESCRIPTION -->
-    <meta name="description" content="This is my cool website!" />
-
+    <meta name="description" content="Candidate test - Front-end Developer at IC WEB Co,. Ltd." />
+    <meta name="author" content="Phattaraphon Chomchaiyaphum">
+    <meta name="keywords" content="HTML, CSS, SASS/SCSS, JS">
+    
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/jpg" href="/path/to/your/favicon/" />
+    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png" />
+    <!-- <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16"> -->
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -26,25 +30,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
   </head>
+
   <body>
 
-    <header class="header">
+    <!-- Start Header -->
+    <header class="header" id="home">
       <nav class="nav">
-        <!-- <span class="nav-toggle" id="js-nav-toggle">
-          <i class="fas fa-bars"></i>
-        </span> -->
-
         <div class="logo">
           <h1> < / > Developer</h1>
         </div>
         <ul class="js-menu" id="js-menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">News</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">About Us</a></li>
+            <li><a href="#overviews">News</a></li>
+            <li><a href="#greatwork">Contact Us</a></li>
         </ul>
       </nav>
-
       <div class="info">
         <div class="info-wrapper">
           <h1>DEVELOPMENT</h1>
@@ -56,9 +57,10 @@
         </div>
       </div>
     </header>
+    <!-- End Header -->
 
-
-    <section class="services">
+    <!-- Start Service Section -->
+    <section class="services" id="services">
       <div class="services_wrapper">
         <h1 class="services_title">Services<strong>.</strong></h1>
         <div class="service_details">
@@ -95,56 +97,96 @@
         </div>
       </div>
     </section>
-
-    <section class="overviews">
+    <!-- End Service Section -->
+    
+    <!-- Start Overviews Section -->
+    <section class="overviews" id="overviews">
       <div class="overviews_wrapper">
         <div class="overview_item">
-          <h1 class="overview_item-number">1054</h1>
+          <div class="overview_item-number" id="value1">1054</div>
           <p class="overview_item-title">Clients</p>
         </div>
         <div class="overview_item">
-          <h1 class="overview_item-number">154</h1>
+          <div class="overview_item-number" id="value2">154</div>
           <p class="overview_item-title">Project</p>
         </div>
         <div class="overview_item">
-          <h1 class="overview_item-number">59</h1>
+          <h1 class="overview_item-number" id="value3">59</h1>
           <p class="overview_item-title">Awards</p>
         </div>
         <div class="overview_item">
-          <h1 class="overview_item-number">34</h1>
+          <h1 class="overview_item-number" id="value4">34</h1>
           <p class="overview_item-title">Team</p>
         </div>
       </div>
     </section>
-
-    <section class="great-work">
+    <!-- End Overviews Section -->
+    
+    <!-- Start Great Work Section -->
+    <section class="great-work" id="greatwork">
       <h1 class="great-work-title">Great Work<strong>.</strong></h1>
-      <ul class="great-work-menu">
-        <li><a href="#">All</a></li>
-        <li><a href="#">Branding</a></li>
-        <li><a href="#">Design</a></li>
-        <li><a href="#">Photo</a></li>
-        <li><a href="#">Coffee</a></li>
-      </ul>
-      <div class="great-work-gallery">
-        <img src="assets/images/img1.png" alt="product1">
-        <img src="assets/images/img2.png" alt="product2">
-        <img src="assets/images/img3.png" alt="product3">
-        <img src="assets/images/img4.png" alt="product4">
-        <img src="assets/images/img5.png" alt="product5">
-        <img src="assets/images/img6.png" alt="product6">
-        <img src="assets/images/img7.png" alt="product7">
-        <img src="assets/images/img8.png" alt="product8">
+      <div id="myBtnContainer" class="great-work-menu">
+        <button class="btn active" onclick="filterSelection('all')">All</button>
+        <button class="btn" onclick="filterSelection('branding')">Branding</button>
+        <button class="btn" onclick="filterSelection('design')">Design</button>
+        <button class="btn" onclick="filterSelection('photo')">Photo</button>
+        <button class="btn" onclick="filterSelection('coffee')">Coffee</button>
       </div>
-
+      <div class="row">
+        <div class="column branding coffee">
+          <div class="content">
+            <img src="assets/images/img1.png" alt="branding coffee" style="width:100%">
+          </div>
+        </div>
+        <div class="column photo branding">
+          <div class="content">
+          <img src="assets/images/img2.png" alt="photo branding" style="width:100%">
+          </div>
+        </div>
+        <div class="column design">
+          <div class="content">
+          <img src="assets/images/img3.png" alt="design" style="width:100%">
+          </div>
+        </div>
+        <div class="column photo">
+          <div class="content">
+            <img src="assets/images/img4.png" alt="photo" style="width:100%">
+          </div>
+        </div>
+        <div class="column branding photo">
+          <div class="content">
+          <img src="assets/images/img5.png" alt="branding photo" style="width:100%">
+          </div>
+        </div>
+        <div class="column design">
+          <div class="content">
+          <img src="assets/images/img6.png"alt="design" style="width:100%">
+          </div>
+        </div>
+        <div class="column design">
+          <div class="content">
+            <img src="assets/images/img7.png" alt="design" style="width:100%">
+          </div>
+        </div>
+        <div class="column coffee">
+          <div class="content">
+          <img src="assets/images/img8.png" alt="coffee" style="width:100%">
+          </div>
+        </div>
+      </div>
     </section>
+    <!-- End Great Work  Section -->
 
+    <!-- Start Footer Section -->
     <footer class="footer">
       <a href="">©2020 <b> < / > Developer.</b> All Rights Reserved.</a>
     </footer>
+    <!-- End Footer Section -->
+
+    <!-- JavaScrip  -->
+    <script src="/js/script.js"></script>
+    <!-- JavaScrip  -->
 
   </body>
+
 </html>
-
-
-
